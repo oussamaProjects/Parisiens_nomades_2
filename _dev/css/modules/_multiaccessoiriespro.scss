@@ -1,0 +1,246 @@
+
+/*Product page*/
+#product{
+   
+   #group_accessories{
+      clear: both;
+      margin: 0px !important;
+      padding: 0px !important;
+      background: transparent !important;
+      color: #000;
+      label {
+         margin-bottom: 0;
+      }
+      input[type=checkbox] {
+         vertical-align: middle;
+      }
+      h3 {
+         font-size: 1.4em;
+         font-weight: bold;
+         margin: 10px 0 20px;
+         padding: 0;
+      }
+      h4 {
+         font-size: 1em;
+         font-weight: bold;
+         text-transform: capitalize;
+         margin: 0 0 10px;
+         cursor: pointer;
+      }
+      .option-row { 
+         // Edited by oussama
+         h4{
+            display: none;
+            margin: 0 !important;
+            padding: 0 !important;
+         }
+         .accessory_info{
+            .accessory_name{
+               font-size: oe_rem(18px);
+               line-height: oe_rem(50px);
+               font-weight: 600;
+               color: $gray-darker;
+               :hover{
+                  text-decoration: underline;
+               }
+            }
+            .accessory_price{
+               font-size: oe_rem(18px);
+               color: $color-danger;
+               padding: 0 oe_rem(6px);
+            }
+            .control-label{
+               font-size: oe_rem(14px);
+               line-height: oe_rem(40px);
+               font-weight: 600;
+               color: $gray-darker;
+            } 
+         }
+         // End by oussama
+         
+         label.group_name {
+            display: block;
+            float: left;
+            width: 27%;
+            text-align: right;
+         }
+         
+         input[type=text] {
+            border: 1px solid #A9A9A9;
+            padding: 1px 0;
+            margin-right: 5px;
+         }
+         // Edited by oussama 
+         table {
+            margin-bottom: 25px;
+            td {
+               padding: 0 !important;
+            }
+            select{
+               color: $gray-darker;
+               background-color: white;
+               padding: oe_rem(0px) oe_rem(10px) !important; 
+               height: oe_rem(38px) !important;
+               width: oe_rem(160px) !important;
+               line-height: initial;
+               border: none !important;
+               @include oe_box-shadow;
+            }
+         }
+         // End by oussama
+         
+         li {
+            a {
+               text-decoration: none;
+            }
+            img {
+               vertical-align: middle;
+            }
+            li div.checker {
+               display: inline-block;
+            }
+         }
+      }
+      .checker span input {
+         cursor: pointer;
+      }
+      
+      // Edited by oussama
+      .custom_quantity{    
+         text-align: left !important;
+         width: 80px !important;
+         color: $gray-darker;
+         background-color: white;
+         padding-left: oe_rem(10px); 
+         height: oe_rem(30px)  !important;
+         line-height: initial;
+         border: none;
+         @include oe_box-shadow;
+      }
+      // End by oussama
+      
+   }
+   .error-number{
+      border: 1px solid red !important;
+   }
+}
+
+
+
+
+
+
+
+#group_accessories .accessories_group_combination {
+   margin-bottom: 15px;
+   margin-top: 5px;
+   
+}
+
+.ma_accessory_combination_name{
+   display: block;
+   font-size: 11px;
+   margin-top: -4px;
+   padding-right: 4px;
+}
+span.warning_out_of_stock{
+   border-radius: 3px;
+   padding: 14px 1px 4px 21px;
+}
+span.forbidden_ordering{
+   border-radius: 3px;
+   padding: 14px 1px 4px 21px;
+}
+.accessorygroup .line_though {
+   text-decoration: line-through;
+   color: grey;
+}
+.ma_none_option {
+   color: #777;
+}
+
+#group_accessories .ma_grower {
+   background: #f6f6f6;
+   /*position: absolute;*/
+   right: 0;
+   top: 0;
+   float: left;
+   cursor: pointer;
+   font-family: "FontAwesome";
+   font-size: 12px; 
+}
+#group_accessories .ma_grower.icon_expand:before, #group_accessories .ma_grower.icon_collapse:before {
+   content: "\f068";
+   vertical-align: middle;
+   width: 30px;
+   height: 30px;
+   color: #333;
+   padding: 0 8px 5px 0;
+   text-align: center; 
+   
+}
+#group_accessories .ma_grower.icon_collapse:before {
+   content: "\f067";
+}
+
+.material-icons {
+   direction: ltr;
+   display: inline-block;
+   font-family: Material Icons;
+   font-feature-settings: "liga";
+   font-size: 24px;
+   font-style: normal;
+   font-weight: 400;
+   height: 1em;
+   letter-spacing: normal;
+   line-height: 1;
+   overflow-wrap: normal;
+   text-rendering: optimizelegibility;
+   text-transform: none;
+   vertical-align: middle;
+   white-space: nowrap;
+   width: 1em;
+}
+.ma_grower .collapse-icons {
+   cursor: pointer;
+   padding: 0;
+   position: absolute;
+   right: 0;
+   top: 0;
+}
+.option-row .collapse-icons[aria-expanded="true"] .add {
+   display: none;
+}
+.option-row .collapse-icons[aria-expanded="true"] .remove {
+   display: block;
+}
+.option-row .collapse-icons .add:hover, .block-categories .collapse-icons .remove:hover {
+   color: #2fb5d2;
+}
+.option-row .collapse-icons .remove {
+   display: none;
+}
+#multiAccessoriesTab{
+   .modal-dialog{
+      max-width: 350px;
+   }
+   .product-cover{ 
+      .layer {
+         width: 55px !important;
+         height: 72px !important;
+         .zoom-in {
+            font-size: 24px;
+         }
+      }
+      img{
+         box-shadow: none;
+         width: initial !important;
+      }
+   }
+   .accessories_table_price{
+      background: transparent !important;
+      .accessories_table_price_content{
+         margin: 0 !important;
+      }
+   }
+}

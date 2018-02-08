@@ -1,0 +1,31 @@
+.language-selector-wrapper{
+   
+   .language-selector{
+      @include flex(center, flex-end, row);
+      margin: 0;
+      li{
+         img{
+            opacity: .5;
+            transition: all .25s ease-in-out;
+         }
+         &:hover{
+            img{
+               outline: 1px solid $gray-darker;
+            }
+         }
+         &.current{
+            img{
+               opacity: 1;
+            }
+         }
+         &:nth-child(1){
+            margin-right: oe_rem(8px);      
+         }
+      }
+   }
+
+   @include media("<md"){
+      @include flex(center, center, row);
+   }
+
+}

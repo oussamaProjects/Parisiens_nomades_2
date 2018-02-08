@@ -1,0 +1,72 @@
+#newsletter{
+	padding: $extra-large-space 0;
+	background: $white; 
+	&.email_subscription{
+		.titre{ 
+			text-align: center; 
+			color: $gray-darker;
+			font-family: $primary-font-family;
+			font-weight: initial;
+			font-size: oe_rem(60px);
+			line-height: oe_rem(40px); 
+			margin-bottom: oe_rem(10px); 
+		}
+		.desc{
+			font-size: oe_rem(16px);
+			line-height: oe_rem(30px);
+			text-align: center;
+			color: $gray-dark;
+			margin: oe_rem(20px) 0 0 0;
+		}
+		.form{
+			width: 100%;
+			max-width: 100%;
+			height: oe_rem(59px);
+			position: relative;
+			margin: oe_rem(20px) auto 0;
+			border: oe_rem(1px) solid $gray-light;
+
+			input[type="text"]{
+				border: none;
+				height: oe_rem(56px);
+				padding: oe_rem(10px) oe_rem(15px);
+				font-size: oe_rem(16px);
+				width: 100%;
+			}
+			input[type="submit"]{
+				font-weight: 300; 
+				color: $white;
+				background-color: $gray-darker;
+				height: oe_rem(40px);
+				font-size: oe_rem(16px);
+				line-height: oe_rem(36px);
+				margin: oe_rem(8px) oe_rem(8px);
+				padding: 0 oe_rem(20px); 
+				cursor: pointer;
+				text-transform: uppercase;
+				@include position(absolute, 0, 0, initial, initial);
+			}
+
+		}
+		
+	}
+
+
+	@include media("<md"){
+		&.email_subscription{
+			.form{ 
+				input[type="text"]{ 
+					font-size: oe_rem(14px); 
+				}
+				input[type="submit"]{ 
+					font-size: oe_rem(14px); 
+					width: 140px;
+					padding:0 oe_rem(10px);
+				}
+
+			}
+
+		}
+	}
+
+}

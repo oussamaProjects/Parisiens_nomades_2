@@ -1,0 +1,227 @@
+.block_newsletter {
+  @include search-box;
+  font-size: $font-size-sm;
+  p {
+    padding-top: $small-space;
+  }
+  form {
+    .input-wrapper {
+      overflow: hidden;
+    }
+    input[type=text] {
+      padding: 11px;
+      &:focus {
+        border: 3px $gray solid;
+        padding: 8px 8px 9px;
+        outline: 0;
+      }
+      width: 100%;
+    }
+    input {
+      height: 42px;
+      box-shadow: none;
+    }
+  }
+  margin-bottom: 0.625rem;
+}
+
+.linklist {
+  .blockcms-title a {
+    color:$gray-darker;
+  }
+}
+.account-list a {
+  color: $gray;
+  &:hover {
+    color: $gray;
+  }
+}
+
+.blockcms-title,
+.myaccount-title,
+.myaccount-title a,
+.block-contact-title {
+  font-weight: 700;
+  font-size: $base-font-size;
+}
+
+.block-social {
+  text-align: right;
+  ul{
+    padding: 0;
+    margin: 0;
+    li {
+      height: 2.5rem;
+      width: 2.5rem;
+      color: $gray-light;
+      background-repeat: no-repeat;
+      display: inline-block;
+      margin: 0.125rem;
+      cursor: pointer;
+      &:hover {
+        color: $gray;
+      }
+      a {
+        display: block;
+        height: oe_rem(22px);
+        white-space: nowrap;
+        text-indent: 100%;
+        overflow: hidden;
+        &:hover {
+          color: transparent;
+        }
+      }
+    }
+  }
+}
+
+
+
+#block_myaccount_infos{
+  .myaccount-title a{
+    color: $gray-darker;
+    span{ 
+      font-size: oe_rem(24px);
+      margin: 0 oe_rem(12px);
+    }
+  }
+}
+
+#_desktop_user_info{
+  margin: 0 oe_rem(10px); 
+  
+}
+.user-info{
+  position: relative; 
+  .user-info-box{
+    @include oe_box-shadow;
+    @include position(absolute, 100%, initial, initial, 0); 
+    background: white;
+    padding: oe_rem(5px) oe_rem(15px);
+    border: 1px solid $gray;
+    display: none;
+    z-index: 9;
+    border-radius: oe_rem(4px);
+    a{
+      display: block;
+      line-height: oe_rem(30px);
+    }
+  }
+  a{ 
+    color: $gray-darker;  
+    .icon-user,
+    .icon-user-unfollow{
+      font-size: oe_rem(24px);
+      margin-bottom: 4px;
+    } 
+  }
+}
+
+
+#_desktop_my_contact_link{
+  a{
+    display: block;
+    color: $gray-darker;  
+    font-size: oe_rem(24px);
+    margin: 0 oe_rem(10px) 0 oe_rem(20px); 
+    span{
+      font-size: 1.75rem;
+    }
+  }
+}
+.footer-container { 
+  box-shadow: 0 0 3px rgba(0,0,0,0.24), 0 0 2px rgba(0,0,0,0.48); 
+  padding-top: $extra-large-space;
+  overflow: hidden; 
+  background-color: $black; 
+  .logo_white{
+    max-width: 100%; 
+    margin-bottom: oe_rem(40px);
+  }
+  .menu-footer {
+    .ul_title{ 
+      font-family: $primary-font-family;
+      font-weight: initial;
+      color: $white;
+      font-size: oe_rem(36px);
+      height: oe_rem(30px);
+      line-height: oe_rem(30px);
+      margin-bottom: oe_rem(10px);
+    } 
+    ul{
+      padding-bottom: oe_rem(20px);
+      li {
+        a {
+          color: $gray;
+          cursor: pointer;
+          display: block;
+          font-size: $base-font-size;
+          height: oe_rem(30px);
+          line-height: oe_rem(30px); 
+          &:hover {
+            color: $white;
+          }
+        } 
+      }
+    }
+  }
+
+  .footer-bas{
+    @include flex(center, center, row);
+    margin-top: $extra-large-space;
+    height: oe_rem(55px);
+    background-color: $gray_lighter;
+    a,
+    span{
+      color: $gray;
+      font-size: $base-font-size;
+      padding: 0 oe_rem(4px);
+    } 
+  }
+  @include media("<md"){
+    .logo_white{
+      text-align: center;
+    }
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .block_newsletter {
+    padding-bottom: 0.625rem;
+    border-bottom: 1px solid $gray-lighter;
+  }
+}
+
+@include media-breakpoint-down(md) { 
+  .block-contact {
+    padding-left: 1.5rem;
+  }
+
+  .footer-container {
+    box-shadow: none;
+    margin-top: 0; 
+    .menu-footer {
+      .ul_title{ 
+        text-align: center
+      } 
+      ul{ 
+        li {
+          a {
+           text-align: center;
+           display: block;
+          } 
+        }
+      }
+    }
+    .footer-bas{
+      @include flex(center, center, column); 
+      height: auto;  
+      padding: oe_rem(10px) 0;    
+      line-height: oe_rem(25px); 
+      .sprt{
+        display: none;
+      } 
+    }
+  }
+  
+}

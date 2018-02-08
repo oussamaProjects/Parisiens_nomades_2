@@ -1,0 +1,41 @@
+#block-reassurance{
+  padding: oe_rem(20px) 0;
+  background-color: $gray-lighter;
+  @include oe_box-shadow-dark;
+  &.block-reassurance-contact{
+    background-color: transparent;
+    box-shadow: none;
+    border-top: 1px solid $gray-lighter;
+  }
+  .block-reassurance-item {
+    text-align: center; 
+    transition: all .3s ease-in-out;
+    padding-top: oe_rem(20px);
+    padding-bottom: oe_rem(20px);
+    &:hover{
+      transform: translateY(-5px);
+    }
+
+    .fa{    
+      color: $gray-darker;
+      font-size: 24px;
+    }
+ 
+    .titre{
+      font-size: oe_rem(16px);
+      line-height: oe_rem(24px);
+      font-weight: 600;
+    }
+    .description{
+      margin-top: oe_rem(5px); 
+      font-size: oe_rem(16px);
+      color: $gray;
+    }
+
+    img{
+      display: inline-block;
+      margin-bottom: 10px;
+    }
+
+  }
+}

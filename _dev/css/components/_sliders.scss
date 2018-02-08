@@ -1,0 +1,60 @@
+
+#manufacturers {
+   margin: oe_rem(15px) 0 oe_rem(50px);
+   #manufacturers_slider {
+      opacity: .7;
+      @include transition();
+   }
+   &:hover{
+      img{  
+         .manufacturer{
+            a{
+               height: oe_rem(170px);
+               background-color: $gray-lighter;
+               text-align: center;
+               @include flex(center, center, row);
+               img{
+                  width: auto;
+                  opacity: 1; 
+               }
+            }
+         }
+      }
+   }
+}
+
+
+.custom-carousel{  
+   &.product-carousel{
+      .owl-nav{ 
+         [class*=owl-]{ 
+            margin-top: oe_rem(-50px); 
+         }
+      }
+   }
+   .owl-nav{   
+      @include flex(center, space-between, row);
+      margin: 0;
+      [class*=owl-]{
+         background-color: transparent;
+         color: $gray-darker;
+         padding: 0;
+         margin: 0;
+         width: oe_rem(40px);
+         height: oe_rem(40px);
+         line-height: oe_rem(45px);
+         margin-top: oe_rem(-20px);
+         &:hover{
+            background-color: transparent;
+            color: $gray-light;
+         }
+      }
+      .owl-next{
+         @include position(absolute, 50%, 0, initial, initial);
+      }
+      .owl-prev{
+         @include position(absolute, 50%, initial, initial, 0);
+      }
+   }
+   
+}

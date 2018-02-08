@@ -1,0 +1,36 @@
+.block-social{ 
+      height: oe_rem(40px);
+      padding: 0 oe_rem(50px);
+      @include flex(center, flex-end, row);
+      .social{ 
+            &:nth-child(1){
+                  margin-right: oe_rem(8px);      
+            }
+            a{
+                  line-height: oe_rem(14px);
+                  .fa{
+                        font-size: oe_rem(18px);
+                        color: $gray-darker;
+                        
+                  }
+                  &:hover{
+                        .fa{
+                              color: $gray;
+                        }
+                  }
+            }
+      }
+      @include media("<xl"){
+      }
+      
+      @include media("<lg"){
+            padding: 0 oe_rem(10px);
+      }
+      @include media("<md"){
+            padding: 0 oe_rem(10px);
+      }
+      @include media("<sm"){
+            padding: 0 oe_rem(10px);
+      }
+}
+ 

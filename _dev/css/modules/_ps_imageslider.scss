@@ -1,0 +1,164 @@
+.carousel{ 
+  float: none;
+  margin-bottom: oe_rem(40px);
+  position: relative;
+  @include oe_box-shadow;
+  .carousel-inner {
+    height: oe_rem(415px);
+    .carousel-item { 
+      height: oe_rem(415px);
+      figure{
+        margin: 0;
+        .caption {
+          width: 100%;
+          text-align: center;
+          padding: oe_rem(20px); 
+          background: rgba($brand-slider, .6);
+          @include position(absolute, 0, 0, 0, 0); 
+          .caption-title{
+            color: $white;
+            font-size: oe_rem(60px);
+            font-family: $primary-font-family;
+            font-weight: initial;
+            line-height: oe_rem(80px);    
+            margin-bottom: oe_rem(18px);
+            padding-bottom: oe_rem(6px); 
+            display: none;
+          }
+          .caption-description{
+            height: 100%;
+            width: 100%;
+            border: 1px solid $gray-lighter;
+            @include flex(center, center, column);
+            p{
+              font-size: oe_rem(50px);
+              line-height: oe_rem(80px);   
+              font-family: $primary-font-family; 
+              color: $white;
+              text-align: center;
+            }
+          }
+        } 
+      }
+    } 
+  }
+  
+  ul.homeslider_tabs{
+    list-style: none;
+    padding: 0;
+    margin: 0; 
+    @include flex(center, flex-end, row);
+    @include position(absolute, initial, oe_rem(24px), oe_rem(10px), oe_rem(24px));
+    z-index: 9;
+    li{
+      width: oe_rem(10px);
+      height: oe_rem(10px); 
+      margin: 0 oe_rem(4px); 
+      
+      a{ 
+        background-color: transparent; 
+        border: 1px solid $white;
+        border-radius: 50%;
+        margin: 0 oe_rem(2px);
+        font-size: 0;
+        display: block;
+        width: 100%;
+        height: 100%;
+        &:hover{
+          background-color: $white;
+        }
+      }
+      
+      &.homeslider_here{ 
+        a{
+          background-color: $white;
+        }
+      }
+      
+    }
+  }
+  
+  
+  @include media("<xl"){ 
+    height: oe_rem(300px);
+    overflow: hidden;
+    margin-bottom: oe_rem(30px);
+    .carousel-inner {
+      height: oe_rem(300px);
+      .carousel-item{
+        height: oe_rem(300px);
+        figure{
+          .caption { 
+            .caption-title{ 
+              font-size: oe_rem(18px);
+              line-height: oe_rem(30px); 
+              margin-bottom: oe_rem(10px);
+            } 
+            .caption-description{
+              padding-bottom: 0; 
+            }
+          }
+        }
+      }
+    }
+    
+  }
+  
+  @include media("<lg"){ 
+    height: oe_rem(250px);
+    margin-bottom: oe_rem(25px);
+    overflow: hidden;
+    .carousel-inner {
+      height: oe_rem(250px);
+      .carousel-item{
+        height: oe_rem(250px);
+        figure{
+          .caption { 
+            .caption-title{ 
+              font-size: oe_rem(18px);
+              line-height: oe_rem(30px); 
+              margin-bottom: oe_rem(10px);
+            } 
+            .caption-description{
+              padding-bottom: 0; 
+            }
+          }
+        }
+      }
+    }
+    
+  }
+  
+  @include media("<md"){ 
+    height: auto;
+    overflow: hidden;
+    .carousel-inner {
+      height: auto;
+      .carousel-item{
+        height: auto;
+        figure{
+          .caption { 
+            .caption-title{ 
+              font-size: oe_rem(16px);
+              line-height: oe_rem(20px); 
+            }
+            .caption-description{ 
+              font-size: oe_rem(14px);
+              line-height: oe_rem(18px);
+              p{
+                margin-bottom: oe_rem(6px); 
+                font-size: oe_rem(40px);
+                line-height: oe_rem(45px);
+              }
+            }
+          }
+        } 
+        
+        .lien{ 
+          font-size: oe_rem(12px);
+          padding: oe_rem(6px) oe_rem(10px);  
+        }
+      }
+    }
+  }
+}
